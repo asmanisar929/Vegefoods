@@ -1,6 +1,6 @@
 .shop-hero {
   height: 55vh;
-  background-image: url("C:\Users\Asma\Desktop\Ezitech Project 2\eziproj2\public\Images\10013.jpg"); /* Replace with your path */
+  background-image: url("../../public/Images/10013.jpg"); /* Replace with your path */
   background-size: cover;
   background-position: center;
   position: relative;

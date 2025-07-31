@@ -171,8 +171,7 @@
 
 .counter-bg {
   position: relative;
-  background: url("C:\Users\Asma\Desktop\Ezitech Project 2\eziproj2\public\Images\Deal.jpg")
-    no-repeat center center;
+  background-image: url("../../public/Images/Deal.jpg") no-repeat center center;
   background-size: cover;
   display: flex;
   justify-content: center;

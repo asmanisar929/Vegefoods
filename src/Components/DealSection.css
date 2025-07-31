@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 60px 40px;
-  background-image: url("C:\Users\Asma\Desktop\Ezitech Project 2\eziproj2\public\Images\Deal.jpg"); /* ✅ Make sure the image is in the public/Images folder */
+  background-image: url("../../public/Images/Deal.jpg"); /* ✅ Make sure the image is in the public/Images folder */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
