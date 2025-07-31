@@ -1,0 +1,57 @@
+.logo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px; /* space between logos */
+  padding: 40px 0;
+  background-color: white;
+}
+
+.logo-section img {
+  height: 55px;
+  object-fit: contain;
+  filter: brightness(0);
+  user-select: none;
+  cursor: pointer;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo-section.animate {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+/* Tablet view */
+@media (max-width: 1024px) {
+  .logo-section {
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 30px 20px;
+  }
+
+  .logo-section img {
+    height: 50px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+  .logo-section {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .logo-section img {
+    height: 45px;
+  }
+}

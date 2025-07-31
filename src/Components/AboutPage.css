@@ -1,0 +1,373 @@
+.hero-sections-wrapper {
+  background-color: #f7f5f0;
+  width: 100%;
+  padding: 4rem 0;
+}
+
+.hero-sections {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-left: 13%;
+  margin-top: -8.5%;
+}
+
+.hero-left {
+  position: relative;
+  width: 48%;
+}
+
+.hero-thumbnail {
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 550px; /* or any value like 500px */
+  object-fit: cover;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #82ae46;
+  font-size: 2rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 2;
+  width: 20%;
+  height: 20%;
+  color: white;
+  animation: pulse 2s infinite;
+  margin-left: -13%;
+  margin-top: -10%;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.video-container {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+}
+
+.video-container video {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-right {
+  width: 48%;
+  padding-left: 2rem;
+}
+
+.hero-right h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 1.5rem;
+}
+
+.hero-right p {
+  font-size: 1.125rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.shop-now {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.shop-now:hover {
+  background-color: white;
+  color: #4caf50;
+  border: 1px solid #4caf50;
+}
+
+.shop-now:active {
+  background-color: #07519b;
+  color: white;
+  box-shadow: 3px 3px 8px rgba(0, 0, 255, 0.6);
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+.shop-now.scrolled {
+  background-color: #4caf50;
+  color: white;
+  border: 4px solid #93bfed;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-section.animate {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+/* Counter Section */
+.counter-section {
+  background-color: #f7f5f0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.counter-bg {
+  position: relative;
+  background: url("C:\Users\Asma\Desktop\Ezitech Project 2\eziproj2\public\Images\Deal.jpg")
+    no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  height: 300px;
+  padding: 0 1rem;
+  gap: 1rem;
+}
+
+.light-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(239, 235, 235, 0.5); /* 👈 semi-transparent white */
+  z-index: 1;
+}
+
+.counter-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem; /* spacing between items */
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Counter Item */
+.counter-item {
+  flex: 0 1 160px; /* 👈 Prevents items from growing too wide */
+  margin: 0.5rem; /* 🔥 Reduced gap */
+}
+
+/* Number */
+.counter-item h2 {
+  font-size: 180%;
+  color: #000;
+  margin: 0.3rem 0;
+  font-weight: 500;
+}
+
+/* Label */
+.counter-item p {
+  color: #555;
+  font-size: 90%;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.features-wrapper {
+  position: relative;
+}
+
+.scroll-top-button1 {
+  position: absolute;
+  left: 50%;
+  bottom: -25px;
+  transform: translateX(-50%);
+  background-color: #8bb43c;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Only bounce the icon */
+.bounce-icon1 {
+  display: inline-block;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+/* Tablet (≤ 768px) */
+@media (max-width: 768px) {
+  .hero-sections {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hero-thumbnail {
+    height: 350px;
+  }
+
+  .play-button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .hero-right h1 {
+    font-size: 2rem;
+  }
+
+  .hero-right p {
+    font-size: 1rem;
+  }
+
+  .shop-now {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .counter-bg {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .counter-item {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  .scroll-top-button1 {
+    left: 90%;
+    bottom: -20px;
+  }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .hero-sections {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-right h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-right p {
+    font-size: 0.95rem;
+  }
+
+  .hero-thumbnail {
+    height: 250px;
+  }
+
+  .play-button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    margin-left: 0;
+  }
+
+  .shop-now {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .counter-bg {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .counter-item {
+    flex: 1 1 100%;
+    margin: 0.5rem 0;
+  }
+
+  .counter-item h2 {
+    font-size: 1.25rem;
+  }
+
+  .counter-item p {
+    font-size: 0.9rem;
+  }
+
+  .scroll-top-button1 {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    left: 85%;
+  }
+}

@@ -1,0 +1,147 @@
+.features-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 40px 0;
+  flex-wrap: wrap;
+  margin-top: 5%;
+}
+
+.feature-item {
+  text-align: center;
+  width: 180px;
+  transition: transform 0.3s ease;
+}
+
+.feature-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.icon-wrapper {
+  width: 65px;
+  height: 65px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgb(231, 228, 228);
+  transition: transform 0.3s ease;
+  background-color: transparent; /* important to keep inner circle transparent */
+}
+
+.feature-item:hover .icon-wrapper {
+  transform: scale(1.1);
+}
+
+.feature-item:hover .icon-wrapper svg {
+  color: #444;
+}
+
+.feature-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.feature-subtitle {
+  font-size: 13px;
+  color: #888;
+}
+
+.feature-icon:hover {
+  background-color: #8bc34a !important; /* Overrides inline backgroundColor */
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature-item {
+  text-align: center;
+  width: 180px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.feature-item.animate {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .features-container {
+    gap: 30px;
+    padding: 30px 10px;
+  }
+
+  .feature-item {
+    width: 45%; /* two items per row */
+  }
+
+  .feature-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-wrapper {
+    width: 55px;
+    height: 55px;
+  }
+
+  .feature-title {
+    font-size: 13px;
+  }
+
+  .feature-subtitle {
+    font-size: 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .features-container {
+    gap: 20px;
+    padding: 20px 10px;
+  }
+
+  .feature-item {
+    width: 100%; /* full width item */
+  }
+
+  .feature-icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  .icon-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+
+  .feature-title {
+    font-size: 12px;
+  }
+
+  .feature-subtitle {
+    font-size: 11px;
+  }
+}

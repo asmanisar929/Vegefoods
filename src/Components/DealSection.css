@@ -1,0 +1,117 @@
+.deal-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+  background-image: url("C:\Users\Asma\Desktop\Ezitech Project 2\eziproj2\public\Images\Deal.jpg"); /* ✅ Make sure the image is in the public/Images folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  color: #fff; /* Optional: improves text visibility over background */
+}
+
+/* Remove background from .deal-image */
+.deal-image {
+  flex: 1;
+  min-height: 400px;
+}
+
+/* Optional: add background overlay for better text contrast */
+.deal-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 8px;
+}
+
+.deal-content {
+  flex: 1;
+  padding: 40px;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+.deal-subtitle {
+  font-family: "Georgia", serif;
+  color: #7c9b3e;
+  font-style: italic;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.deal-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.deal-description {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+  max-width: 480px;
+}
+
+.deal-product {
+  font-family: "Georgia", serif;
+  font-size: 28px;
+  color: #7c9b3e;
+  margin: 20px 0 5px;
+}
+
+.deal-price {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.original-price {
+  color: #666;
+  margin-right: 3px;
+  font-weight: 500;
+}
+
+.discounted-price {
+  color: #6fa733;
+  font-weight: 500;
+}
+
+.deal-timer {
+  margin-top: 10%;
+  display: flex;
+  gap: 40px;
+  font-family: "Helvetica", sans-serif;
+  color: #6fa733;
+}
+
+.deal-timer h4 {
+  font-size: 32px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.deal-timer span {
+  font-size: 13px;
+  color: #333;
+  display: block;
+  margin-top: 5px;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.deal-content.animate {
+  animation: slideUp 0.6s ease-out forwards;
+}

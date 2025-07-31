@@ -1,0 +1,111 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: background 1s ease-in-out;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 10, 10, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.slide-text {
+  font-size: 3em; /* was 3em — increase to make it larger */
+  line-height: 1.1; /* controls space between lines */
+  animation: slideDownUp 1s ease-out forwards;
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 500;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.hero-content p {
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+.hero-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #77b84d;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+@keyframes slideDownUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Styles for Hero Section */
+@media (max-width: 1024px) {
+  .slide-text {
+    font-size: 2.5em;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-text {
+    font-size: 2em;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  .hero-content button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-text {
+    font-size: 1.6em;
+  }
+
+  .hero-content {
+    padding: 0 15px;
+  }
+
+  .hero-content p {
+    font-size: 0.85rem;
+  }
+
+  .hero-content button {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+}
