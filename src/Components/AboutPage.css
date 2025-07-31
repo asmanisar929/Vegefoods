@@ -171,8 +171,10 @@
 
 .counter-bg {
   position: relative;
-  background-image: url("../../public/Images/Deal.jpg") no-repeat center center;
+  background-image: url("../../public/Images/Deal.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
